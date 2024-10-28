@@ -13,9 +13,8 @@ endif()
 # -w to inhibit all warnings.
 if("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
     set(CMAKE_CXX_FLAGS "-Og -ggdb3 -fno-omit-frame-pointer -w -std=c++17")
-    #set(CMAKE_CXX_FLAGS "-g -w -std=c++17")
 else()
-    set(CMAKE_CXX_FLAGS "-g -w -std=c++17 -flto")
+    set(CMAKE_CXX_FLAGS "-w -std=c++17 -flto")
 endif()
 
 add_executable(test test.cpp)
